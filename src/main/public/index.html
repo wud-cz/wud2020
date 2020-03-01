@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>World Usability Day 2020</title>
+    <style type="text/css">
+        @import url('https://fonts.googleapis.com/css?family=Roboto:100,400,700&display=swap');
+        @import url('simple.css');
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+<main>
+    <section>
+        <h1>World Usability Day 2020</h1>
+        <h2>Člověk a umělá inteligence</h2>
+        <h3>Praha, listopad 2020</h3>
+    </section>
+    <section>
+        <form id="registrace" @submit.prevent="registrovat" v-cloak>
+            <div>
+                <label for="email">Chci se zúčastnit:</label> <input id="email" type="email" placeholder="e-mail" v-model="email"/>
+                <button disabled :disabled="disabled" type="submit">{{button}}</button>
+            </div>
+            <div class="small">Až budeme vědět víc informací o letošním WUDu, pošleme Vám e-mail.</div>
+        </form>
+    </section>
+    <section class="small">
+        <p>Chcete se zapojit do organizace, nabídnout sponzoring nebo kontaktovat organizátory? Pište na <a href="mailto:2020@wud.cz">2020@wud.cz</a>.</p>
+        <p>Předchozí ročník: <a href="https://2019.wud.cz/">WUD 2019 – cirkulární ekonomika a udržitelnost</a>.</p>
+        <p>Českou odnož <a href="https://worldusabilityday.org/">celosvětového World Usability Day</a> pořádá <a href="http://asociaceux.cz">Asociace UX</a>.</p>
+    </section>
+</main>
+<footer class="small">
+    Photo by
+    <a href="https://unsplash.com/@hiteshchoudhary?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank"
+       rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Hitesh Choudhary">Hitesh Choudhary</a>
+    on <a href="https://unsplash.com/s/photos/artificial-intelligence?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+</footer>
+<script src="registrace.js" type="application/javascript"></script>
+</body>
+</html>
